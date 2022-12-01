@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$(ls -la . /alx-system_engineering-devops /boot)"
