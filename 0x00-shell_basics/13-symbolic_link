@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$(ln -s __ls__ -t /bin/ls)" 
