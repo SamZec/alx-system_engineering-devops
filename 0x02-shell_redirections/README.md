@@ -15,4 +15,7 @@
 14-findthatword: display lines containing the pattern “root” from the file /etc/passwd
 15-countthatword: display the number of lines that contain the pattern “bin” in the file /etc/passwd
 16-whatsnext:  lines containing the pattern “root” and 3 lines after them in the file /etc/passwd.
-17-hidethisword: all the lines in the file /etc/passwd that do not contain the pattern “bin”.18-letteronly: all lines of the file /etc/ssh/sshd_config starting with a letter.
+17-hidethisword: all the lines in the file /etc/passwd that do not contain the pattern “bin”.118-letteronly: all lines of the file /etc/ssh/sshd_config starting with a letter.
+19-AZ: replace all characters A and c from input to Z and e respectively.
+20-hiago: removes all letters c and C from input.
+21-reverse: reverse its input.
