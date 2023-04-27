@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# 8-for_ls -  script that displays:
+#+ The content of the current directory In a list format Where only the part of
+#+ the name after the first dash is displayed using for loop
+hld="$(ls)"
+for i in $hld; do
+	echo "$i" | cut -d '-' -f2
+done
+
+
