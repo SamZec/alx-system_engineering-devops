@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# 3-redirection
+# a Bash script containing commands to automatically configure a Ubuntu machine
+# nginx sever to set /redirect_me as a redirection to another page.
+line="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;"
+sudo sed -i "26i $line" /etc/nginx/sites-available/default
+sudo service nginx restart
+sudo service nginx reload
