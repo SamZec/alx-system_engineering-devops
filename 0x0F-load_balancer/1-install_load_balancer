@@ -13,7 +13,7 @@ printf %s "frontend haproxy-main
 
 backend nginx_servers
     balance roundrobin
-    server websvr1      52.201.222.10:80 check
-    server websvr2      34.232.70.226:80 check
+    server 187716-web-01      52.201.222.10:80 check
+    server 187716-web-02      34.232.70.226:80 check
 " > /etc/haproxy/haproxy.cfg
 sudo systemctl restart haproxy
