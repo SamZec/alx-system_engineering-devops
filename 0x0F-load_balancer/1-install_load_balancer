@@ -18,4 +18,4 @@ backend nginx_servers
     server 187716-web-01 52.201.222.10:80 check
     server 187716-web-02 34.232.70.226:80 check
 " > /etc/haproxy/haproxy.cfg
-sudo systemctl restart haproxy
+sudo service haproxy restart
