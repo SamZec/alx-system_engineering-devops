@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# script that runs nginx server under user nginx listening on
+# all active IPs on port 8080
+
+sudo useradd -m nginx --password nginx
+user="nginx"
+sudo chown -R "$user":"$user" /var/www/
+sudo chown -R "$user":"$user" /etc/nginx
+line="user nginx;"
+sudo sed -i "1s/.*/${line}/" /etc/nginx/nginx.conf
+printf %s "server {
+    listen 8080;
+    listen [::]:8080 default_server;
+}" > /etc/nginx/sites-available/default
+sudo service nginx restart
