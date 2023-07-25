@@ -15,7 +15,7 @@ def to_csv(user_id):
     file_name = '{}.csv'.format(user_id)
     user_url = 'https://jsonplaceholder.typicode.com/users/' + user_id
     get_name = requests.get(user_url)
-    USER_NAME = get_name.json().get('name')
+    USER_NAME = get_name.json().get('username')
 
     user_todos = requests.get(user_url + '/todos')
     todos = user_todos.json()
