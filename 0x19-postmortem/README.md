@@ -1,4 +1,4 @@
-#  Postmortem For An Compressor Outage At Niche Cocoa Industry Ghana LTD.
+#  Postmortem For Compressor Outage At Niche Cocoa Industry Ghana LTD.
 
 ## Summary:
 The compressor powering the moulded chocolate cooler broke down while running
