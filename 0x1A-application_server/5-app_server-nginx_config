@@ -1,0 +1,31 @@
+# Setup Nginx so that it properly serves the static assets
+server {
+    listen 80;
+    listen [::]:80;
+    server_name 52.201.222.10;
+    server_name 127.0.0.1;
+    add_header X-Served-By $hostname;
+
+    location /airbnb-onepage {
+        proxy_pass http://127.0.0.1:5000/airbnb-onepage;
+    }
+
+    location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+            proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+    }
+
+    location /api {
+        proxy_pass http://127.0.0.1:5002/api;
+    }
+
+    location /static {
+        proxy_pass http://127.0.0.1:5003;
+    }
+
+    # 404 error page
+    error_page 404 /404.html;
+    location /404 {
+        root /var/www/html;
+        internal;
+    }
+}
